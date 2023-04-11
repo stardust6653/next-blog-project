@@ -20,9 +20,9 @@ const page = async ({ params }: Props) => {
 
   return (
     <div className="flex justify-center overflow-scroll">
-      <article className="mt-12 mb-12 w-1/2">
-        <h1 className="text-5xl font-bold mb-6">{currentData[0].title}</h1>
-        <p className="text-end">발행일 : {currentData[0].date}</p>
+      <article className="sm: w-11/12 m-5 xl:w-7/12 mt-12 mb-12">
+        <h1 className="sm: text-3xl xl:text-5xl font-bold mb-6">{currentData[0].title}</h1>
+        <p className="mb-4 text-end">발행일 : {currentData[0].date}</p>
         <Image
           src={currentData[0].previewImg}
           alt=""
