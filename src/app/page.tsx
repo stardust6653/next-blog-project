@@ -1,6 +1,6 @@
 import React from 'react';
 import PostCard from '../components/home/PostCard';
-import { getDescFilteredData } from '@/controller/CRUD';
+import { getDescFilteredData } from '../controller/CRUD';
 
 const Home = async () => {
   const data = await getDescFilteredData();

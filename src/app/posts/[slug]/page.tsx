@@ -1,7 +1,8 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { getDescFilteredData } from '@/controller/CRUD';
+import { getDescFilteredData } from '../../../controller/CRUD';
 import Image from 'next/image';
+import { Metadata } from 'next';
 
 const MarkDownViewer = dynamic(() => import('../../../components/viewer/MarkDownViewer'), {
   ssr: false,
@@ -10,6 +11,16 @@ const MarkDownViewer = dynamic(() => import('../../../components/viewer/MarkDown
 interface Props {
   params: {
     slug: string;
+  };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const data = await getDescFilteredData();
+  const currentData = data.filter((item) => String(item.id) === params.slug);
+
+  return {
+    title: currentData[0].title,
+    description: currentData[0].description,
   };
 }
 

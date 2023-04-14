@@ -1,6 +1,12 @@
-import PostCard from '@/components/home/PostCard';
-import { getDescFilteredData } from '@/controller/CRUD';
 import React from 'react';
+import { getDescFilteredData } from '../../controller/CRUD';
+import PostCard from '../../components/home/PostCard';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'All Posts',
+  description: 'All Posts',
+};
 
 const page = async () => {
   const data = await getDescFilteredData();
