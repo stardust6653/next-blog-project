@@ -35,3 +35,9 @@ https://soyeah-log.vercel.app/
 
 > Contact Page 삭제
 > Contact 요소는 메인 화면으로 가지고 옴
+
+0.0.4(2023-04-20)
+
+> 반응형 일부 수정
+> 로고 반응형 추가
+> post 1024px 사이즈 대응
