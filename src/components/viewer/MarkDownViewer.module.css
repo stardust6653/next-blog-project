@@ -2,31 +2,37 @@
   font-size: 35px;
   padding: 15px 0;
   margin-top: 25px;
+  line-height: 38px;
 }
 .container h2 {
   font-size: 32px;
   padding: 15px 0;
   margin-top: 25px;
+  line-height: 35px;
 }
 .container h3 {
   font-size: 29px;
   padding: 15px 0;
   margin-top: 25px;
+  line-height: 32px;
 }
 .container h4 {
   font-size: 26px;
   padding: 15px 0;
   margin-top: 25px;
+  line-height: 29px;
 }
 .container h5 {
   font-size: 23px;
   padding: 15px 0;
   margin-top: 25px;
+  line-height: 26px;
 }
 .container h6 {
   font-size: 20px;
   padding: 15px 0;
   margin-top: 25px;
+  line-height: 23px;
 }
 
 .container p {
