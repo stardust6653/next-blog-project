@@ -24,3 +24,9 @@ https://soyeah-log.vercel.app/
 ## 버전
 
 0.0.1(MVP. 2023-04-12)
+
+> 초기 동작 모델
+
+0.0.2(2023-04-20)
+
+> Viewer CSS 수정

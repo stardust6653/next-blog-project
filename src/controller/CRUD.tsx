@@ -1,4 +1,4 @@
-import { addDoc, collection, getDocs, limit, orderBy, query } from 'firebase/firestore';
+import { addDoc, collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { db } from '../firebase';
 
 interface DataProps {
