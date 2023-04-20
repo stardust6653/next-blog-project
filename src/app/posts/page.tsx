@@ -1,5 +1,5 @@
 import React from 'react';
-import { getDescFilteredData } from '../../controller/CRUD';
+import { getFilteredData } from '../../controller/CRUD';
 import PostCard from '../../components/home/PostCard';
 import { Metadata } from 'next';
 
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const page = async () => {
-  const data = await getDescFilteredData();
+  const data = await getFilteredData('desc');
 
   return (
     <section className="flex justify-center mt-8 w-full mb-10">

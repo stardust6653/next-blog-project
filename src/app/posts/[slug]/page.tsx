@@ -1,6 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { getDescFilteredData } from '../../../controller/CRUD';
+import { getFilteredData } from '../../../controller/CRUD';
 import Image from 'next/image';
 import { Metadata } from 'next';
 
@@ -15,7 +15,7 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const data = await getDescFilteredData();
+  const data = await getFilteredData('desc');
   const currentData = data.filter((item) => String(item.id) === params.slug);
 
   return {
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const page = async ({ params }: Props) => {
-  const data = await getDescFilteredData();
+  const data = await getFilteredData('desc');
 
   const currentData = data.filter((item) => String(item.id) === params.slug);
 

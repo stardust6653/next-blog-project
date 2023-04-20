@@ -1,13 +1,13 @@
 import React from 'react';
 import PostCard from '../components/home/PostCard';
-import { getDescFilteredData } from '../controller/CRUD';
+import { getFilteredData } from '../controller/CRUD';
 import profile from '../../public/images/profile-photo.jpg';
 import Image from 'next/image';
 import { AiOutlineLinkedin } from 'react-icons/ai';
 import { FiGithub } from 'react-icons/fi';
 
 const Home = async () => {
-  const data = await getDescFilteredData();
+  const data = await getFilteredData('desc');
 
   return (
     <section className="flex flex-col justify-center items-center mt-8 w-full mb-10 ">

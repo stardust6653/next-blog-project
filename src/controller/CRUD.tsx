@@ -1,4 +1,4 @@
-import { addDoc, collection, getDocs, orderBy, query } from 'firebase/firestore';
+import { OrderByDirection, addDoc, collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { db } from '../firebase';
 
 interface DataProps {
@@ -38,9 +38,9 @@ export const postData = (data: PostProps) => {
   addDoc(postRef, data);
 };
 
-export const getDescFilteredData = async () => {
+export const getFilteredData = async (type: OrderByDirection) => {
   const postRef = collection(db, 'posts');
-  const queryData = query(postRef, orderBy('id', 'desc'));
+  const queryData = query(postRef, orderBy('id', type));
   const querySnapShot = await getDocs(queryData);
   const descFilteredDataArr: DataProps[] = [];
 
