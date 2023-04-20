@@ -30,3 +30,8 @@ https://soyeah-log.vercel.app/
 0.0.2(2023-04-20)
 
 > Viewer CSS 수정
+
+0.0.3(2023-04-20)
+
+> Contact Page 삭제
+> Contact 요소는 메인 화면으로 가지고 옴
